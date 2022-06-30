@@ -40,19 +40,20 @@ export default function Home() {
       >
         <Coder />
       </div>
+
       <ModalCurriculum isOpen={isOpenModal} toggle={() => setIsOpenModal((old) => !old)} />
-      <div className="h-screen" ref={refAbout}>
+      <div className="min-h-screen" ref={refAbout}>
         <PageContent>
           <div className="w-[650px] space-y-6">
             <PageTitle>About</PageTitle>
-            <div className="flex justify-between">
-              <div className="flex">
-                <div className="avatar mr-10">
-                  <div className="w-24 rounded-full">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center">
+                <div className="avatar rounded-full h-20 w-20 md:w-24 md:h-24 mr-10">
+                  <div className="rounded-full w-full">
                     <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
                   </div>
                 </div>
-                <ul className="list-none">
+                <ul className="list-none  text-xs md:text-lg">
                   <li>
                     <span className="font-bold">Name:</span> Vinicius Gazolla Boneto
                   </li>
@@ -73,7 +74,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <p className="text-justify leading-7">
+            <p className="text-justify leading-5 text-xs md:text-lg md:leading-7">
               I am currently a junior full stack developer, where I develop internal systems and complete websites for
               companies in the region. In my professional development the main technology I used and use is
               javascript/typescript, both in creating graphical interfaces that follow UX/UI concepts, and in
@@ -81,7 +82,7 @@ export default function Home() {
               knowledge about other/new technologies that arouse my interest.
             </p>
 
-            <div className="grid grid-cols-3 gap-4 ">
+            <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
               <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>

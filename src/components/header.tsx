@@ -1,3 +1,5 @@
+import { DropdownNavbar } from './dropdown-navbar'
+
 type Props = {
   scrollHome(): void
   scrollAbout(): void
@@ -8,10 +10,16 @@ type Props = {
 export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
   return (
     <div className="navbar fixed z-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 md:px-0">
         <div className="flex justify-between items-center w-full py-2">
           <h3 className="bg-transparent clip-text text-2xl text-base-content">Vine Boneto</h3>
-          <div className="space-x-4">
+          <DropdownNavbar
+            scrollHome={scrollHome}
+            scrollAbout={scrollAbout}
+            scrollJobs={scrollJobs}
+            scrollPortfolio={scrollPortfolio}
+          />
+          <div className="space-x-4 hidden md:block">
             <a className="link link-hover" onClick={scrollHome}>
               <span className="clip-text text-xl text-base-content">Home</span>
             </a>
