@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import { BsArrowDown } from 'react-icons/bs'
 
-import { Header, Footer, PageContent, PageTitle } from '@/components'
+import { Header, Footer, PageContent, PageTitle, ModalCurriculum } from '@/components'
 
 const allScripts = [
   'yarn add aboutme',
@@ -17,6 +17,7 @@ const allScripts = [
 const scriptVelocityInMs = 50
 
 export default function Home() {
+  const [isOpenModal, setIsOpenModal] = useState(false)
   const [scripts, setScripts] = useState(allScripts.map((_) => ''))
   const [currentScript, setCurrentScript] = useState(0)
 
@@ -98,29 +99,38 @@ export default function Home() {
         </div>
       </div>
 
+      <ModalCurriculum isOpen={isOpenModal} toggle={() => setIsOpenModal((old) => !old)} />
+
       <div className="h-screen" ref={refAbout}>
         <PageContent>
           <div className="w-[650px] space-y-6">
             <PageTitle>About</PageTitle>
-            <div className="flex">
-              <div className="avatar mr-10">
-                <div className="w-24 rounded-full">
-                  <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
+            <div className="flex justify-between">
+              <div className="flex">
+                <div className="avatar mr-10">
+                  <div className="w-24 rounded-full">
+                    <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
+                  </div>
                 </div>
+                <ul className="list-disc">
+                  <li>Name: Vinicius Gazolla Boneto</li>
+                  <li>Role: Write some codes</li>
+                  <li>From: Videira - Brazil</li>
+                  <li>Contact: vineboneto@gmail.com</li>
+                </ul>
               </div>
-              <ul className="list-disc">
-                <li>Nome: Vinicius Gazolla Boneto</li>
-                <li>Função: Escreve alguns códigos por ae</li>
-                <li>Onde: Videira - Brazil</li>
-                <li>Contato: vineboneto@gmail.com</li>
-              </ul>
+              <div className="w-[120px]">
+                <button onClick={() => setIsOpenModal((old) => !old)} className="btn btn-ghost btn-square w-full">
+                  View Curriculum
+                </button>
+              </div>
             </div>
             <p className="text-justify leading-7">
-              Atualmente sou desenvolvedor full stack júnior, onde desenvolvo sistemas internos e websites completos
-              para empresas da região. No meu desenvolvimento profissional a principal tecnologia que utilizei e utilizo
-              é javascript/typescript, tanto na criação de interfaces gráficas que seguem conceitos de UX/UI, quanto no
-              desenvolvimento de webservices que seguem arquitetura REST. Sempre estou buscando novos horizontes de
-              conhecimento sobre outras/novas tecnologias que despertam o meu interesse.
+              I am currently a junior full stack developer, where I develop internal systems and complete websites for
+              companies in the region. In my professional development the main technology I used and use is
+              javascript/typescript, both in creating graphical interfaces that follow UX/UI concepts, and in
+              development of web services that follow REST architecture. {"I'm"} always looking for new horizons
+              knowledge about other/new technologies that arouse my interest.
             </p>
 
             <div className="grid grid-cols-3 gap-4">
@@ -163,13 +173,13 @@ export default function Home() {
       <div ref={refJobs} className="h-screen" style={{ backgroundImage: 'url(/topography.svg)' }}>
         <PageContent>
           <div className="w-[650px] space-y-6">
-            <PageTitle>Experiência</PageTitle>
+            <PageTitle>Jobs</PageTitle>
             <div className="space-y-4">
               <div className="card shadow-xl card-bordered bg-base-300">
                 <div className="card-body">
-                  <h2 className="card-title">SECRETÁRIA MUNICIPAL E SAÚDE</h2>
+                  <h2 className="card-title">Health department</h2>
                   <span>Ago 2019 - Ago 2021 | Videira, SC</span>
-                  <p>Suporte ao usuário, manutenção de computadores e impressoras</p>
+                  <p>User support, maintenance of computers and printers</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -191,12 +201,19 @@ export default function Home() {
       <div ref={refPortfolio} className="h-screen bg-gradient-to-r from-base-100 to-base-300">
         <PageContent>
           <div className="w-[650px] space-y-6">
-            <PageTitle>Portfólio</PageTitle>
+            <PageTitle>Portfolio</PageTitle>
             <div className="space-y-4">
               <div className="card shadow-xl card-bordered bg-base-300">
                 <div className="card-body">
-                  <a className="card-title link link-hover">Turing Machine</a>
-                  <p>Máquina de turing (Trabalho de faculdade). Eu realmente não lembro como isso funciona</p>
+                  <a
+                    className="card-title link link-hover"
+                    href="https://turing-machine-five.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Turing machine
+                  </a>
+                  <p>Turing machine (College work). I {"don't"} really remember how it works</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -205,8 +222,15 @@ export default function Home() {
               </div>
               <div className="card shadow-xl card-bordered bg-base-300">
                 <div className="card-body">
-                  <a className="card-title link link-hover">N queens hill climbing</a>
-                  <p>Resolução do problema das 8 rainhas em um tabuleiro utilizando algoritmo de busca hill climbing</p>
+                  <a
+                    className="card-title link link-hover"
+                    href="https://n-queens-hill-climbing-react.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    N queens hill climbing
+                  </a>
+                  <p>Solving the problem of 8 queens on a board using hill climbing search algorithm</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -215,8 +239,15 @@ export default function Home() {
               </div>
               <div className="card shadow-xl card-bordered bg-base-300">
                 <div className="card-body">
-                  <a className="card-title link link-hover">DWL Web</a>
-                  <p>Converte videos do youtube para mp3/mp4</p>
+                  <a
+                    className="card-title link link-hover"
+                    href="https://dwl-web.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    DWL Web
+                  </a>
+                  <p>Convert youtube videos to mp3/mp4</p>
                 </div>
               </div>
             </div>
