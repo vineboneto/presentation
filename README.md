@@ -4,3 +4,4 @@
 - [ ] Mobile layout
 - [ ] Light mode
 - [ ] Translation to pt/en
+- [ ] Add favicon
