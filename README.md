@@ -1,8 +1,8 @@
 # Profile page
 
 - [x] Desktop layout
-- [ ] Mobile layout
-- [ ] Light mode
+- [x] Mobile layout
+- [x] Light mode
 - [ ] Translation to pt/en
 - [ ] Add favicon
 - [ ] Style scrollbar
