@@ -5,3 +5,4 @@
 - [ ] Light mode
 - [ ] Translation to pt/en
 - [ ] Add favicon
+- [ ] Style scrollbar
