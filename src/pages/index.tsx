@@ -190,7 +190,7 @@ export default function Home() {
                 <div className="card-body">
                   <h2 className="card-title">SKORETECH SOLUÇÕES EM TECNOLOGIA LTDA</h2>
                   <span>Ago 2021 - Now | Videira, SC</span>
-                  <p>Desenvolvimento de sistemas completos para gestão de empresas.</p>
+                  <p>Development of complete systems for business management.</p>
                 </div>
               </div>
             </div>
