@@ -7,7 +7,7 @@ type Props = {
 
 export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
   return (
-    <div className="navbar fixed">
+    <div className="navbar fixed z-20">
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full py-2">
           <h3 className="bg-transparent clip-text text-2xl text-base-content">Vine Boneto</h3>

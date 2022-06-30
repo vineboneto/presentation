@@ -1,25 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { MutableRefObject, useEffect, useRef, useState } from 'react'
+import { MutableRefObject, useRef, useState } from 'react'
 import { BsArrowDown } from 'react-icons/bs'
 
 import { Header, Footer, PageContent, PageTitle, ModalCurriculum } from '@/components'
-
-const allScripts = [
-  'yarn add aboutme',
-  '############# Installing dependencies #############',
-  'Full stack developer junior',
-  'Clean code enthusiast and technology lover',
-  'Javascript and typescript maniac',
-  'Play some games and read some manga :)',
-]
-
-const scriptVelocityInMs = 50
+import { Coder } from '@/components/coder'
 
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
-  const [scripts, setScripts] = useState(allScripts.map((_) => ''))
-  const [currentScript, setCurrentScript] = useState(0)
 
   const refHome = useRef<HTMLDivElement>(null)
   const refAbout = useRef<HTMLDivElement>(null)
@@ -31,30 +19,6 @@ export default function Home() {
       window.scrollTo(0, ref.current?.offsetTop || 0)
     }
   }
-
-  function resolverScript(scriptIndex: number) {
-    setTimeout(() => {
-      setScripts((state) => {
-        const newScripts = state.map((script, idx, self) => {
-          if (idx === scriptIndex) {
-            const string = allScripts[idx]
-            const newCharacter = string[self[idx].length]
-            return newCharacter ? script + newCharacter : script
-          }
-          return script
-        })
-        return newScripts
-      })
-    }, scriptVelocityInMs)
-  }
-
-  useEffect(() => {
-    if (scripts[currentScript] !== allScripts[currentScript]) {
-      resolverScript(currentScript)
-    } else if (currentScript <= allScripts.length) {
-      setCurrentScript((old) => old + 1)
-    }
-  }, [scripts, currentScript])
 
   return (
     <div className="max-w-screen min-h-screen overflow-hidden">
@@ -74,27 +38,7 @@ export default function Home() {
         className="h-screen flex justify-center items-center"
         style={{ backgroundImage: 'url(/topography.svg)' }}
       >
-        <div className="mockup-code w-[650px]">
-          {scripts.map((script, idx) => {
-            if (script || idx === 0) {
-              let className = ''
-              let prefix = '~'
-
-              if (idx === 0) prefix = '$'
-              if (idx === 1) {
-                prefix = '>'
-                className = 'text-success'
-              }
-              if (idx === 5) className = 'text-yellow-500'
-
-              return (
-                <pre data-prefix={prefix} key={idx} className={className}>
-                  {script}
-                </pre>
-              )
-            }
-          })}
-        </div>
+        <Coder />
       </div>
       <ModalCurriculum isOpen={isOpenModal} toggle={() => setIsOpenModal((old) => !old)} />
       <div className="h-screen" ref={refAbout}>
