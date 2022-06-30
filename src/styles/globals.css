@@ -7,3 +7,7 @@
     clip: rect(auto, auto, auto, auto) !important
   }
 }
+
+* {
+  box-sizing: border-box;
+}
