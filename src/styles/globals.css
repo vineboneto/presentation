@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip-text {
+    clip: rect(auto, auto, auto, auto) !important
+  }
+}
