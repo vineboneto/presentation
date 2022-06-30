@@ -112,11 +112,19 @@ export default function Home() {
                     <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
                   </div>
                 </div>
-                <ul className="list-disc">
-                  <li>Name: Vinicius Gazolla Boneto</li>
-                  <li>Role: Write some codes</li>
-                  <li>From: Videira - Brazil</li>
-                  <li>Contact: vineboneto@gmail.com</li>
+                <ul className="list-none">
+                  <li>
+                    <span className="font-bold">Name:</span> Vinicius Gazolla Boneto
+                  </li>
+                  <li>
+                    <span className="font-bold">Role:</span> Write some codes
+                  </li>
+                  <li>
+                    <span className="font-bold">From:</span> Videira - Brazil
+                  </li>
+                  <li>
+                    <span className="font-bold">Contact:</span> vineboneto@gmail.com
+                  </li>
                 </ul>
               </div>
               <div className="w-[120px]">
@@ -137,7 +145,7 @@ export default function Home() {
               <div className="card glass">
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>
-                  <ul className="list-disc">
+                  <ul className="list-none">
                     <li>NodeJS</li>
                     <li>Typescript</li>
                     <li>Clean Architecture</li>
@@ -150,7 +158,7 @@ export default function Home() {
               <div className="card glass">
                 <div className="card-body">
                   <h2 className="card-title">Frontend</h2>
-                  <ul className="list-disc">
+                  <ul className="list-none">
                     <li>ReactJS</li>
                     <li>CSS; Tailwind...</li>
                     <li>HTML</li>
@@ -160,7 +168,7 @@ export default function Home() {
               <div className="card glass">
                 <div className="card-body">
                   <h2 className="card-title">Mobile</h2>
-                  <ul className="list-disc">
+                  <ul className="list-none">
                     <li>React Native</li>
                   </ul>
                 </div>
