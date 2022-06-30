@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-import { Header } from '@/components'
+import { Header, PageContent, PageTitle } from '@/components'
 
 const allScripts = [
   'yarn add aboutme',
@@ -78,126 +78,118 @@ export default function Home() {
       </div>
 
       <div className="h-screen">
-        <div className="container mx-auto">
-          <div className="pt-20 flex justify-center">
-            <div className="w-[650px] space-y-6">
-              <h3 className="text-5xl underline">About</h3>
-              <div className="flex">
-                <div className="avatar mr-10">
-                  <div className="w-24 rounded-full">
-                    <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
-                  </div>
+        <PageContent>
+          <div className="w-[650px] space-y-6">
+            <PageTitle>About</PageTitle>
+            <div className="flex">
+              <div className="avatar mr-10">
+                <div className="w-24 rounded-full">
+                  <Image src="https://github.com/vineboneto.png" alt="avatar" width="100%" height="100%" />
                 </div>
-                <ul className="list-disc">
-                  <li>Nome: Vinicius Gazolla Boneto</li>
-                  <li>Função: Escreve alguns códigos por ae</li>
-                  <li>Onde: Videira - Brazil</li>
-                  <li>Contato: vineboneto@gmail.com</li>
-                </ul>
               </div>
-              <p className="text-justify leading-7">
-                Atualmente sou desenvolvedor full stack júnior, onde desenvolvo sistemas internos e websites completos
-                para empresas da região. No meu desenvolvimento profissional a principal tecnologia que utilizei e
-                utilizo é javascript/typescript, tanto na criação de interfaces gráficas que seguem conceitos de UX/UI,
-                quanto no desenvolvimento de webservices que seguem arquitetura REST. Sempre estou buscando novos
-                horizontes de conhecimento sobre outras/novas tecnologias que despertam o meu interesse.
-              </p>
+              <ul className="list-disc">
+                <li>Nome: Vinicius Gazolla Boneto</li>
+                <li>Função: Escreve alguns códigos por ae</li>
+                <li>Onde: Videira - Brazil</li>
+                <li>Contato: vineboneto@gmail.com</li>
+              </ul>
+            </div>
+            <p className="text-justify leading-7">
+              Atualmente sou desenvolvedor full stack júnior, onde desenvolvo sistemas internos e websites completos
+              para empresas da região. No meu desenvolvimento profissional a principal tecnologia que utilizei e utilizo
+              é javascript/typescript, tanto na criação de interfaces gráficas que seguem conceitos de UX/UI, quanto no
+              desenvolvimento de webservices que seguem arquitetura REST. Sempre estou buscando novos horizontes de
+              conhecimento sobre outras/novas tecnologias que despertam o meu interesse.
+            </p>
 
-              <div className="grid grid-cols-3 gap-4">
-                <div className="card glass">
-                  <div className="card-body">
-                    <h2 className="card-title">Backend</h2>
-                    <ul className="list-disc">
-                      <li>NodeJS</li>
-                      <li>Typescript</li>
-                      <li>Clean Architecture</li>
-                      <li>Express</li>
-                      <li>Elixir (learning)</li>
-                      <li>SQL</li>
-                    </ul>
-                  </div>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="card glass">
+                <div className="card-body">
+                  <h2 className="card-title">Backend</h2>
+                  <ul className="list-disc">
+                    <li>NodeJS</li>
+                    <li>Typescript</li>
+                    <li>Clean Architecture</li>
+                    <li>Express</li>
+                    <li>Elixir (learning)</li>
+                    <li>SQL</li>
+                  </ul>
                 </div>
-                <div className="card glass">
-                  <div className="card-body">
-                    <h2 className="card-title">Frontend</h2>
-                    <ul className="list-disc">
-                      <li>ReactJS</li>
-                      <li>CSS; Tailwind...</li>
-                      <li>HTML</li>
-                    </ul>
-                  </div>
+              </div>
+              <div className="card glass">
+                <div className="card-body">
+                  <h2 className="card-title">Frontend</h2>
+                  <ul className="list-disc">
+                    <li>ReactJS</li>
+                    <li>CSS; Tailwind...</li>
+                    <li>HTML</li>
+                  </ul>
                 </div>
-                <div className="card glass">
-                  <div className="card-body">
-                    <h2 className="card-title">Mobile</h2>
-                    <ul className="list-disc">
-                      <li>React Native</li>
-                    </ul>
-                  </div>
+              </div>
+              <div className="card glass">
+                <div className="card-body">
+                  <h2 className="card-title">Mobile</h2>
+                  <ul className="list-disc">
+                    <li>React Native</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </PageContent>
       </div>
       <div className="h-screen" style={{ backgroundImage: 'url(/topography.svg)' }}>
-        <div className="container mx-auto">
-          <div className="flex justify-center pt-20">
-            <div className="w-[650px] space-y-6">
-              <h3 className="text-5xl underline">Experiência</h3>
-              <div className="space-y-4">
-                <div className="card shadow-xl card-bordered bg-base-300">
-                  <div className="card-body">
-                    <h2 className="card-title">SECRETÁRIA MUNICIPAL E SAÚDE</h2>
-                    <span>Ago 2019 - Ago 2021 | Videira, SC</span>
-                    <p>Suporte ao usuário, manutenção de computadores e impressoras</p>
-                  </div>
+        <PageContent>
+          <div className="w-[650px] space-y-6">
+            <PageTitle>Experiência</PageTitle>
+            <div className="space-y-4">
+              <div className="card shadow-xl card-bordered bg-base-300">
+                <div className="card-body">
+                  <h2 className="card-title">SECRETÁRIA MUNICIPAL E SAÚDE</h2>
+                  <span>Ago 2019 - Ago 2021 | Videira, SC</span>
+                  <p>Suporte ao usuário, manutenção de computadores e impressoras</p>
                 </div>
-                <span>Adicionar flecha</span>
-                <div className="card shadow-xl card-bordered bg-base-300">
-                  <div className="card-body">
-                    <h2 className="card-title">SKORETECH SOLUÇÕES EM TECNOLOGIA LTDA</h2>
-                    <span>Ago 2021 - Presente | Videira, SC</span>
-                    <p>Desenvolvimento de sistemas completos para gestão de empresas.</p>
-                  </div>
+              </div>
+              <span>Adicionar flecha</span>
+              <div className="card shadow-xl card-bordered bg-base-300">
+                <div className="card-body">
+                  <h2 className="card-title">SKORETECH SOLUÇÕES EM TECNOLOGIA LTDA</h2>
+                  <span>Ago 2021 - Presente | Videira, SC</span>
+                  <p>Desenvolvimento de sistemas completos para gestão de empresas.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </PageContent>
       </div>
 
       <div className="h-screen bg-gradient-to-r from-base-100 to-base-300">
-        <div className="container mx-auto">
-          <div className="flex justify-center pt-20">
-            <div className="w-[650px] space-y-6">
-              <h3 className="text-5xl underline">Portfólio</h3>
-              <div className="space-y-4">
-                <div className="card shadow-xl card-bordered bg-base-300">
-                  <div className="card-body">
-                    <a className="card-title link link-hover">Turing Machine</a>
-                    <p>Máquina de turing (Trabalho de faculdade). Eu realmente não lembro como isso funciona</p>
-                  </div>
+        <PageContent>
+          <div className="w-[650px] space-y-6">
+            <PageTitle>Portfólio</PageTitle>
+            <div className="space-y-4">
+              <div className="card shadow-xl card-bordered bg-base-300">
+                <div className="card-body">
+                  <a className="card-title link link-hover">Turing Machine</a>
+                  <p>Máquina de turing (Trabalho de faculdade). Eu realmente não lembro como isso funciona</p>
                 </div>
-                <span>Adicionar flecha</span>
-                <div className="card shadow-xl card-bordered bg-base-300">
-                  <div className="card-body">
-                    <a className="card-title link link-hover">N queens hill climbing</a>
-                    <p>
-                      Resolução do problema das 8 rainhas em um tabuleiro utilizando algoritmo de busca hill climbing
-                    </p>
-                  </div>
+              </div>
+              <span>Adicionar flecha</span>
+              <div className="card shadow-xl card-bordered bg-base-300">
+                <div className="card-body">
+                  <a className="card-title link link-hover">N queens hill climbing</a>
+                  <p>Resolução do problema das 8 rainhas em um tabuleiro utilizando algoritmo de busca hill climbing</p>
                 </div>
-                <div className="card shadow-xl card-bordered bg-base-300">
-                  <div className="card-body">
-                    <a className="card-title link link-hover">DWL Web</a>
-                    <p>Converte videos do youtube para mp3/mp4</p>
-                  </div>
+              </div>
+              <div className="card shadow-xl card-bordered bg-base-300">
+                <div className="card-body">
+                  <a className="card-title link link-hover">DWL Web</a>
+                  <p>Converte videos do youtube para mp3/mp4</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </PageContent>
       </div>
 
       <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
