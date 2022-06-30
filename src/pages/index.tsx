@@ -137,8 +137,8 @@ export default function Home() {
               knowledge about other/new technologies that arouse my interest.
             </p>
 
-            <div className="grid grid-cols-3 gap-4">
-              <div className="card glass">
+            <div className="grid grid-cols-3 gap-4 ">
+              <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>
                   <ul className="list-none">
@@ -151,7 +151,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="card glass">
+              <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Frontend</h2>
                   <ul className="list-none">
@@ -161,7 +161,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="card glass">
+              <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Mobile</h2>
                   <ul className="list-none">
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>Jobs</PageTitle>
             <div className="space-y-4">
-              <div className="card shadow-xl card-bordered bg-base-300">
+              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Health department</h2>
                   <span>Ago 2019 - Ago 2021 | Videira, SC</span>
@@ -189,7 +189,7 @@ export default function Home() {
                 <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
                 <BsArrowDown className="relative h-6 w-6 text-base" />
               </div>
-              <div className="card shadow-xl card-bordered bg-base-300">
+              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">SKORETECH SOLUÇÕES EM TECNOLOGIA LTDA</h2>
                   <span>Ago 2021 - Now | Videira, SC</span>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>Portfolio</PageTitle>
             <div className="space-y-4">
-              <div className="card shadow-xl card-bordered bg-base-300">
+              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
@@ -222,7 +222,7 @@ export default function Home() {
                 <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
                 <BsArrowDown className="relative h-6 w-6 text-base" />
               </div>
-              <div className="card shadow-xl card-bordered bg-base-300">
+              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
@@ -239,7 +239,7 @@ export default function Home() {
                 <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
                 <BsArrowDown className="relative h-6 w-6 text-base" />
               </div>
-              <div className="card shadow-xl card-bordered bg-base-300">
+              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
