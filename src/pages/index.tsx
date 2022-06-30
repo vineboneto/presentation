@@ -170,7 +170,7 @@ export default function Home() {
         </PageContent>
       </div>
 
-      <div ref={refJobs} className="h-screen" style={{ backgroundImage: 'url(/topography.svg)' }}>
+      <div ref={refJobs} className="h-screen" style={{ backgroundImage: 'url(/architect.svg)' }}>
         <PageContent>
           <div className="w-[650px] space-y-6">
             <PageTitle>Jobs</PageTitle>
