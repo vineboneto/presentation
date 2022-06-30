@@ -10,11 +10,11 @@ type Props = {
 
 export function DropdownNavbar({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
   return (
-    <div className={'dropdown md:hidden dropdown-end'}>
+    <div className="dropdown md:hidden dropdown-end">
       <label tabIndex={0} className="btn btn-ghost md:hidden">
         <BiMenuAltRight size={30} />
       </label>
-      <ul tabIndex={0} className={'menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'}>
+      <ul tabIndex={0} className={'menu dropdown-content shadow-xl mt-3 p-2  glass rounded-box w-52'}>
         <li>
           <a className="link link-hover" onClick={scrollHome}>
             <span className="clip-text text-sm text-base-content">Home</span>
