@@ -23,8 +23,8 @@ export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }:
           <div className="flex space-x-4">
             <label className="swap swap-rotate hidden md:inline-grid">
               <input type="checkbox" />
-              <BsFillSunFill className="swap-on fill-current" size={25} onClick={() => changeTheme()} />
-              <BsFillMoonFill className="swap-off fill-current" size={25} onClick={() => changeTheme()} />
+              <BsFillSunFill className="swap-off fill-current" size={25} onClick={() => changeTheme()} />
+              <BsFillMoonFill className="swap-on fill-current" size={25} onClick={() => changeTheme()} />
             </label>
 
             <DropdownNavbar

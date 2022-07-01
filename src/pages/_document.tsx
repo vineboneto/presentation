@@ -5,6 +5,8 @@ export default function Document() {
     <Html data-theme="dark">
       <Head>
         <meta name="theme-color" content="#2a303b" />
+
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </Head>
       <body>
         <Main />

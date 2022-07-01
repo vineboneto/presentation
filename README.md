@@ -4,5 +4,5 @@
 - [x] Mobile layout
 - [x] Light mode
 - [ ] Translation to pt/en
-- [ ] Add favicon
+- [x] Add favicon
 - [ ] Style scrollbar
