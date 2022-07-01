@@ -6,3 +6,4 @@
 - [x] Translation to pt/en
 - [x] Add favicon
 - [x] Style scrollbar
+- [ ] Add Parallax Effect

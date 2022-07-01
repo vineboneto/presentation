@@ -5,6 +5,7 @@ export default function Document() {
     <Html data-theme="dark">
       <Head>
         <meta name="theme-color" content="#2a303b" />
+        <meta name="google-site-verification" content="QIm65N3SfzHeImTWBERp3r5TglWWEQ8X1I9Or6rfHvU" />
 
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>

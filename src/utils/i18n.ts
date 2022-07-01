@@ -5,7 +5,7 @@ const resources = {
   en: {
     translation: {
       about: 'About',
-      jobs: 'Jobs',
+      jobs: 'Experience',
       portfolio: 'Portfolio',
       name: 'Name',
       role: 'Role',
@@ -28,7 +28,7 @@ const resources = {
   pt: {
     translation: {
       about: 'Sobre',
-      jobs: 'Experiências',
+      jobs: 'Experiência',
       portfolio: 'Portfólio',
       'Write some codes': 'Escrever alguns códigos',
       name: 'Nome',
