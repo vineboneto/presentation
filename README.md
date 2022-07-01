@@ -3,6 +3,6 @@
 - [x] Desktop layout
 - [x] Mobile layout
 - [x] Light mode
-- [ ] Translation to pt/en
+- [x] Translation to pt/en
 - [x] Add favicon
-- [ ] Style scrollbar
+- [x] Style scrollbar

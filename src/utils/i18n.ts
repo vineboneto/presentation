@@ -21,7 +21,7 @@ const resources = {
       'Turing machine': 'Turing machine',
       'first-portfolio-text': 'Turing machine simulator (College work). I don"t really remember how it works',
       'N queens hill climbing': 'N queens hill climbing',
-      'second-portfolio-text': 'Solving the problem of 8 queens on a board using hill climbing search algorithm',
+      'second-portfolio-text': 'Solving the problem of 8 queens on a chessboard using hill climbing search algorithm',
       'third-portfolio-text': 'Convert youtube videos to mp3/mp4',
     },
   },
@@ -46,7 +46,7 @@ const resources = {
         'Simulador de máquina de Turing (trabalho universitário). Eu realmente não me lembro como funciona',
       'N queens hill climbing': '8 Rainhas hill climbing',
       'second-portfolio-text':
-        'Resolvendo o problema de 8 rainhas em um tabuleiro usando algoritmo de busca de subida de colina',
+        'Resolvendo o problema de 8 rainhas em um tabuleiro de xadrez usando algoritmo de hill climbing',
       'third-portfolio-text': 'Converta vídeos do youtube para mp3/mp4',
     },
   },

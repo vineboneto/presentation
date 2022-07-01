@@ -16,7 +16,7 @@ const fullScriptsMobile = [
   'Full stack developer junior',
   'Clean code enthusiast',
   'technology lover',
-  'Javascript and typescript maniac',
+  'js/ts maniac',
   'Play some games :)',
 ]
 

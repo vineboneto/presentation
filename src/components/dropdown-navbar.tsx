@@ -16,24 +16,24 @@ export function DropdownNavbar({ scrollHome, scrollAbout, scrollJobs, scrollPort
       <label tabIndex={0} className="btn btn-ghost md:hidden">
         <BiMenuAltRight size={30} />
       </label>
-      <ul tabIndex={0} className={'menu dropdown-content shadow-xl mt-3 p-2  glass rounded-box w-52'}>
-        <li>
-          <a className="link link-hover" onClick={scrollHome}>
-            <span className="clip-text text-sm text-base-content">Home</span>
+      <ul tabIndex={0} className="menu dropdown-content shadow-xl mt-3 p-2  glass rounded-box w-52">
+        <li className="">
+          <a className="link link-hove active:bg-base-300" onClick={scrollHome}>
+            <span className="clip-text text-sm text-base-content ">Home</span>
           </a>
         </li>
         <li>
-          <a className="link link-hover" onClick={scrollAbout}>
+          <a className="link link-hover active:bg-base-300" onClick={scrollAbout}>
             <span className="clip-text text-sm text-base-content">{t('about')}</span>
           </a>
         </li>
         <li>
-          <a className="link link-hover" onClick={scrollJobs}>
+          <a className="link link-hover active:bg-base-300" onClick={scrollJobs}>
             <span className="clip-text text-sm text-base-content">{t('jobs')}</span>
           </a>
         </li>
         <li>
-          <a className="link link-hover" onClick={scrollPortfolio}>
+          <a className="link link-hover active:bg-base-300" onClick={scrollPortfolio}>
             <span className="clip-text text-sm text-base-content">{t('portfolio')}</span>
           </a>
         </li>
