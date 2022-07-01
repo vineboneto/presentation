@@ -16,7 +16,7 @@ export default function Home() {
   const refPortfolio = useRef<HTMLDivElement>(null)
 
   function scrollTo(ref: MutableRefObject<HTMLDivElement | null>) {
-    if (ref) {
+    if (ref && typeof window !== 'undefined') {
       window.scrollTo(0, ref.current?.offsetTop || 0)
     }
   }

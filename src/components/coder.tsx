@@ -1,4 +1,4 @@
-import { useMediaQuery, useScript } from '@/hooks'
+import { useScript } from '@/hooks'
 import { ScriptLine } from './script-line'
 
 const fullScriptsWide = [
@@ -25,22 +25,19 @@ const velocityInMs = 50
 export function Coder() {
   const scriptWide = useScript({ fullScript: fullScriptsWide, velocityInMs })
   const scriptMobile = useScript({ fullScript: fullScriptsMobile, velocityInMs })
-  const isWide = useMediaQuery('(min-width: 768px)')
-
-  if (isWide) {
-    return (
-      <div className="mockup-code w-[650px]">
+  return (
+    <>
+      <div className="mockup-code w-[650px] hidden md:block">
         {scriptWide.scripts.map((script, idx, self) => (
           <ScriptLine key={idx} installLine={1} endLine={self.length - 1} idx={idx} script={script} />
         ))}
       </div>
-    )
-  }
-  return (
-    <div className="mockup-code w-[350px]">
-      {scriptMobile.scripts.map((script, idx, self) => (
-        <ScriptLine key={idx} installLine={1} endLine={self.length - 1} idx={idx} script={script} />
-      ))}
-    </div>
+
+      <div className="mockup-code w-[350px] block md:hidden">
+        {scriptMobile.scripts.map((script, idx, self) => (
+          <ScriptLine key={idx} installLine={1} endLine={self.length - 1} idx={idx} script={script} />
+        ))}
+      </div>
+    </>
   )
 }
