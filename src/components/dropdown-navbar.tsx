@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { BiMenuAltRight } from 'react-icons/bi'
 
 type Props = {
@@ -9,6 +9,8 @@ type Props = {
 }
 
 export function DropdownNavbar({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
+  const { t } = useTranslation()
+
   return (
     <div className="dropdown md:hidden dropdown-end">
       <label tabIndex={0} className="btn btn-ghost md:hidden">
@@ -22,17 +24,17 @@ export function DropdownNavbar({ scrollHome, scrollAbout, scrollJobs, scrollPort
         </li>
         <li>
           <a className="link link-hover" onClick={scrollAbout}>
-            <span className="clip-text text-sm text-base-content">About</span>
+            <span className="clip-text text-sm text-base-content">{t('about')}</span>
           </a>
         </li>
         <li>
           <a className="link link-hover" onClick={scrollJobs}>
-            <span className="clip-text text-sm text-base-content">Jobs</span>
+            <span className="clip-text text-sm text-base-content">{t('jobs')}</span>
           </a>
         </li>
         <li>
           <a className="link link-hover" onClick={scrollPortfolio}>
-            <span className="clip-text text-sm text-base-content">Portfolio</span>
+            <span className="clip-text text-sm text-base-content">{t('portfolio')}</span>
           </a>
         </li>
       </ul>

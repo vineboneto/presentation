@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { MutableRefObject, useRef, useState } from 'react'
 import { BsArrowDown } from 'react-icons/bs'
+import { useTranslation } from 'react-i18next'
 
-import { Header, Footer, PageContent, PageTitle, ModalCurriculum } from '@/components'
-import { Coder } from '@/components/coder'
+import { Header, Coder, Footer, PageContent, PageTitle, ModalCurriculum } from '@/components'
 
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
+  const { t } = useTranslation()
 
   const refHome = useRef<HTMLDivElement>(null)
   const refAbout = useRef<HTMLDivElement>(null)
@@ -45,7 +46,7 @@ export default function Home() {
       <div className="min-h-screen" ref={refAbout}>
         <PageContent>
           <div className="w-[650px] space-y-6">
-            <PageTitle>About</PageTitle>
+            <PageTitle>{t('about')}</PageTitle>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <div className="avatar rounded-full h-20 w-20 md:w-24 md:h-24 mr-10">
@@ -55,32 +56,26 @@ export default function Home() {
                 </div>
                 <ul className="list-none  text-xs md:text-lg">
                   <li>
-                    <span className="font-bold">Name:</span> Vinicius Gazolla Boneto
+                    <span className="font-bold">{t('name')}:</span> Vinicius Gazolla Boneto
                   </li>
                   <li>
-                    <span className="font-bold">Role:</span> Write some codes
+                    <span className="font-bold">{t('role')}:</span> {t('Write some codes')}
                   </li>
                   <li>
-                    <span className="font-bold">From:</span> Videira - Brazil
+                    <span className="font-bold">{t('from')}:</span> Videira - Brazil
                   </li>
                   <li>
-                    <span className="font-bold">Contact:</span> vineboneto@gmail.com
+                    <span className="font-bold">{t('contact')}:</span> vineboneto@gmail.com
                   </li>
                 </ul>
               </div>
               <div className="w-[120px]">
                 <button onClick={() => setIsOpenModal((old) => !old)} className="btn btn-ghost btn-square w-full">
-                  View Curriculum
+                  {t('View Curriculum')}
                 </button>
               </div>
             </div>
-            <p className="text-justify leading-5 text-xs md:text-lg md:leading-7">
-              I am currently a junior full stack developer, where I develop internal systems and complete websites for
-              companies in the region. In my professional development the main technology I used and use is
-              javascript/typescript, both in creating graphical interfaces that follow UX/UI concepts, and in
-              development of web services that follow REST architecture. {"I'm"} always looking for new horizons
-              knowledge about other/new technologies that arouse my interest.
-            </p>
+            <p className="text-justify leading-5 text-xs md:text-lg md:leading-7">{t('about-text')}</p>
 
             <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
               <div className="card glass transition-all duration-300s hover:scale-105">
@@ -118,16 +113,17 @@ export default function Home() {
           </div>
         </PageContent>
       </div>
+
       <div ref={refJobs} className="h-screen bg-gradient-to-r from-base-100 to-base-300">
         <PageContent>
           <div className="w-[650px] space-y-6">
-            <PageTitle>Jobs</PageTitle>
+            <PageTitle>{t('jobs')}</PageTitle>
             <div className="space-y-4">
               <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
-                  <h2 className="card-title">Health department</h2>
+                  <h2 className="card-title">{t('Health department')}</h2>
                   <span>Ago 2019 - Ago 2021 | Videira, SC</span>
-                  <p>User support, maintenance of computers and printers</p>
+                  <p>{t('first-job-text')}</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -136,19 +132,20 @@ export default function Home() {
               </div>
               <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
-                  <h2 className="card-title">SKORETECH SOLUÇÕES EM TECNOLOGIA LTDA</h2>
+                  <h2 className="card-title">Skoretech Soluções em Tecnologia LTDA</h2>
                   <span>Ago 2021 - Now | Videira, SC</span>
-                  <p>Development of complete systems for business management.</p>
+                  <p>{t('second-job-text')}</p>
                 </div>
               </div>
             </div>
           </div>
         </PageContent>
       </div>
+
       <div ref={refPortfolio} className="h-screen bg-gradient-to-r from-base-100 to-base-300">
         <PageContent>
           <div className="w-[650px] space-y-6">
-            <PageTitle>Portfolio</PageTitle>
+            <PageTitle>{t('portfolio')}</PageTitle>
             <div className="space-y-4">
               <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
                 <div className="card-body">
@@ -158,9 +155,9 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Turing machine
+                    {t('Turing machine')}
                   </a>
-                  <p>Turing machine (College work). I {"don't"} really remember how it works</p>
+                  <p>{t('first-portfolio-text')}</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -175,9 +172,9 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    N queens hill climbing
+                    {t('N queens hill climbing')}
                   </a>
-                  <p>Solving the problem of 8 queens on a board using hill climbing search algorithm</p>
+                  <p>{t('second-portfolio-text')}</p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -194,7 +191,7 @@ export default function Home() {
                   >
                     DWL Web
                   </a>
-                  <p>Convert youtube videos to mp3/mp4</p>
+                  <p>{t('third-portfolio-text')}</p>
                 </div>
               </div>
             </div>

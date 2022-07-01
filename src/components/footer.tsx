@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 type Props = {
@@ -8,6 +9,8 @@ type Props = {
 }
 
 export function Footer({ scrollAbout, scrollHome, scrollJobs, scrollPortfolio }: Props) {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
       <div className="grid grid-flow-col gap-4">
@@ -15,13 +18,13 @@ export function Footer({ scrollAbout, scrollHome, scrollJobs, scrollPortfolio }:
           Home
         </a>
         <a className="link link-hover" onClick={scrollAbout}>
-          About
+          {t('about')}
         </a>
         <a className="link link-hover" onClick={scrollJobs}>
-          Jobs
+          {t('jobs')}
         </a>
         <a className="link link-hover" onClick={scrollPortfolio}>
-          Portfolio
+          {t('portfolio')}
         </a>
       </div>
       <div>
