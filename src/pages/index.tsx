@@ -62,11 +62,10 @@ export default function Home() {
       </div>
 
       <ModalCurriculum isOpen={isOpenModal} toggle={() => setIsOpenModal((old) => !old)} />
-
       <div className="min-h-screen relative bg-gradient-to-bl from-base-100 to-base-300" ref={refAbout}>
         <AnimationDark />
         <PageContent>
-          <div className="w-[650px] space-y-6">
+          <div className="w-[650px] space-y-6 z-50">
             <PageTitle>{t('about')}</PageTitle>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
@@ -91,7 +90,10 @@ export default function Home() {
                 </ul>
               </div>
               <div className="w-[120px]">
-                <button onClick={() => setIsOpenModal((old) => !old)} className="btn btn-ghost btn-square w-full">
+                <button
+                  onClick={() => setIsOpenModal((old) => !old)}
+                  className="btn btn-ghost rounded-lg uppercase w-full"
+                >
                   {t('View Curriculum')}
                 </button>
               </div>
