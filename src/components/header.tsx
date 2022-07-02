@@ -1,6 +1,8 @@
-import { DropdownNavbar } from './dropdown-navbar'
+import { useEffect, useState } from 'react'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
+
+import { DropdownNavbar } from './dropdown-navbar'
 
 type Props = {
   scrollHome(): void
@@ -11,6 +13,7 @@ type Props = {
 
 export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
   const { t, i18n } = useTranslation()
+  const [isShrunk, setShrunk] = useState(false)
 
   function changeTheme() {
     const html = document.getElementsByTagName('html')[0]
@@ -22,9 +25,23 @@ export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }:
     i18n.changeLanguage(i18n.language === 'en' ? 'pt' : 'en')
   }
 
+  useEffect(() => {
+    const scrollingElement = () => {
+      const navHeight = 64
+      setShrunk(() => {
+        if (document.body.scrollTop > navHeight || document.documentElement.scrollTop > navHeight) {
+          return true
+        }
+        return false
+      })
+    }
+    window.addEventListener('scroll', scrollingElement)
+    return () => window.removeEventListener('scroll', scrollingElement)
+  }, [])
+
   return (
-    <div className="navbar fixed z-20">
-      <div className="container mx-auto px-2 md:px-0">
+    <div className={'navbar fixed z-20'.concat(' ', isShrunk ? 'bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-sm' : '')}>
+      <div className="container mx-auto px-2 lg:px-4 xl:xs-0">
         <div className="flex justify-between items-center w-full py-2">
           <h3 className="bg-transparent clip-text text-2xl text-base-content font-semibold">Vine Boneto</h3>
           <div className="flex space-x-4 items-center">
