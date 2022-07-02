@@ -36,7 +36,7 @@ export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }:
   }, [])
 
   return (
-    <div className={'navbar fixed z-20'.concat(' ', isShrunk ? 'bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-sm' : '')}>
+    <div className={'navbar fixed z-50'.concat(' ', isShrunk ? 'bg-[rgba(255, 255, 255, 0.2)] backdrop-blur-sm' : '')}>
       <div className="container mx-auto px-2 lg:px-4 xl:xs-0">
         <div className="flex justify-between items-center w-full py-2">
           <h3 className="bg-transparent clip-text text-2xl text-base-content font-semibold">Vine Boneto</h3>

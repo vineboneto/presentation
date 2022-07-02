@@ -55,7 +55,7 @@ export default function Home() {
       <div className="min-h-screen relative bg-gradient-to-bl from-base-100 to-base-300" ref={refAbout}>
         <AnimationBackground />
         <PageContent>
-          <div className="w-[650px] space-y-6 z-50">
+          <div className="w-[650px] space-y-6 z-20">
             <PageTitle>{t('about')}</PageTitle>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
