@@ -3,6 +3,7 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { useTranslation } from 'react-i18next'
 
 import { DropdownNavbar } from './dropdown-navbar'
+import { useTheme } from '@/contexts'
 
 type Props = {
   scrollHome(): void
@@ -14,12 +15,7 @@ type Props = {
 export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }: Props) {
   const { t, i18n } = useTranslation()
   const [isShrunk, setShrunk] = useState(false)
-
-  function changeTheme() {
-    const html = document.getElementsByTagName('html')[0]
-    const theme = html.getAttribute('data-theme')
-    html.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark')
-  }
+  const { changeTheme } = useTheme()
 
   function changeLanguage() {
     i18n.changeLanguage(i18n.language === 'en' ? 'pt' : 'en')
@@ -47,8 +43,8 @@ export function Header({ scrollHome, scrollAbout, scrollJobs, scrollPortfolio }:
           <div className="flex space-x-4 items-center">
             <label className="swap swap-rotate hidden md:inline-grid">
               <input type="checkbox" />
-              <BsFillSunFill className="swap-off fill-current" size={25} onClick={changeTheme} />
-              <BsFillMoonFill className="swap-on fill-current" size={25} onClick={changeTheme} />
+              <BsFillSunFill className="swap-off fill-current" size={25} onClick={() => changeTheme()} />
+              <BsFillMoonFill className="swap-on fill-current" size={25} onClick={() => changeTheme()} />
             </label>
             <label className="swap swap-rotate">
               <input type="checkbox" />

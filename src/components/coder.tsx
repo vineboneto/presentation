@@ -27,7 +27,7 @@ export function Coder() {
   const scriptMobile = useScript({ fullScript: fullScriptsMobile, velocityInMs })
   return (
     <>
-      <div className="mockup-code w-[650px] hidden md:block">
+      <div className="mockup-code w-[650px] z-10 rounded-xl hidden md:block">
         {scriptWide.scripts.map((script, idx, self) => (
           <ScriptLine key={idx} installLine={1} endLine={self.length - 1} idx={idx} script={script} />
         ))}

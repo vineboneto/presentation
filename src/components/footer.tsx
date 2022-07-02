@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { AnimationDark } from './animation-dark'
 
 type Props = {
   scrollHome(): void
@@ -13,6 +14,7 @@ export function Footer({ scrollAbout, scrollHome, scrollJobs, scrollPortfolio }:
 
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <AnimationDark />
       <div className="grid grid-flow-col gap-4">
         <a className="link link-hover" onClick={scrollHome}>
           Home
