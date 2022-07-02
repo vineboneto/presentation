@@ -83,8 +83,8 @@ export default function Home() {
             </div>
             <p className="text-justify leading-5 text-xs md:text-lg md:leading-7">{t('about-text')}</p>
 
-            <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
-              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
+            <div className="grid grid-rows-3 md:grid-cols-3 gap-4" data-aos="fade-up">
+              <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>
                   <ul className="list-none">
@@ -97,8 +97,8 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
-                <div className="card-body">
+              <div className="card glass transition-all duration-300s hover:scale-105">
+                <div className="card-body ">
                   <h2 className="card-title">Frontend</h2>
                   <ul className="list-none">
                     <li>ReactJS</li>
@@ -107,7 +107,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
+              <div className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Mobile</h2>
                   <ul className="list-none">
@@ -125,25 +125,23 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('jobs')}</PageTitle>
             <div className="space-y-4">
-              <div
-                data-aos="fade-right"
-                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
-              >
-                <div className="card-body">
-                  <h2 className="card-title">{t('Health department')}</h2>
-                  <span>Ago 2019 - Ago 2021 | Videira, SC</span>
-                  <p>{t('first-job-text')}</p>
+              <div data-aos="fade-right">
+                <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+                  <div className="card-body">
+                    <h2 className="card-title">{t('Health department')}</h2>
+                    <span>Ago 2019 - Ago 2021 | Videira, SC</span>
+                    <p>{t('first-job-text')}</p>
+                  </div>
                 </div>
               </div>
               <ArrowDown data-aos="zoom-in" />
-              <div
-                data-aos="fade-left"
-                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
-              >
-                <div className="card-body">
-                  <h2 className="card-title">Skoretech Soluções em Tecnologia LTDA</h2>
-                  <span>Ago 2021 - Now | Videira, SC</span>
-                  <p>{t('second-job-text')}</p>
+              <div data-aos="fade-left">
+                <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+                  <div className="card-body">
+                    <h2 className="card-title">Skoretech Soluções em Tecnologia LTDA</h2>
+                    <span>Ago 2021 - Now | Videira, SC</span>
+                    <p>{t('second-job-text')}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -156,54 +154,51 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('portfolio')}</PageTitle>
             <div className="space-y-4">
-              <div
-                data-aos="fade-right"
-                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
-              >
-                <div className="card-body">
-                  <a
-                    className="card-title link link-hover"
-                    href="https://turing-machine-five.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t('Turing machine')}
-                  </a>
-                  <p>{t('first-portfolio-text')}</p>
+              <div data-aos="fade-right">
+                <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+                  <div className="card-body">
+                    <a
+                      className="card-title link link-hover"
+                      href="https://turing-machine-five.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t('Turing machine')}
+                    </a>
+                    <p>{t('first-portfolio-text')}</p>
+                  </div>
                 </div>
               </div>
               <ArrowDown data-aos="zoom-in" />
-              <div
-                data-aos="fade-left"
-                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
-              >
-                <div className="card-body">
-                  <a
-                    className="card-title link link-hover"
-                    href="https://n-queens-hill-climbing-react.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t('N queens hill climbing')}
-                  </a>
-                  <p>{t('second-portfolio-text')}</p>
+              <div data-aos="fade-left">
+                <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+                  <div className="card-body">
+                    <a
+                      className="card-title link link-hover"
+                      href="https://n-queens-hill-climbing-react.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t('N queens hill climbing')}
+                    </a>
+                    <p>{t('second-portfolio-text')}</p>
+                  </div>
                 </div>
               </div>
               <ArrowDown data-aos="zoom-in" />
-              <div
-                data-aos="fade-right"
-                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
-              >
-                <div className="card-body">
-                  <a
-                    className="card-title link link-hover"
-                    href="https://dwl-web.herokuapp.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    DWL Web
-                  </a>
-                  <p>{t('third-portfolio-text')}</p>
+              <div data-aos="fade-right">
+                <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+                  <div className="card-body">
+                    <a
+                      className="card-title link link-hover"
+                      href="https://dwl-web.herokuapp.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      DWL Web
+                    </a>
+                    <p>{t('third-portfolio-text')}</p>
+                  </div>
                 </div>
               </div>
             </div>
