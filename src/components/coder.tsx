@@ -33,7 +33,7 @@ export function Coder() {
         ))}
       </div>
 
-      <div className="mockup-code w-[350px] block md:hidden">
+      <div className="mockup-code w-[350px] z-10 block md:hidden">
         {scriptMobile.scripts.map((script, idx, self) => (
           <ScriptLine key={idx} installLine={1} endLine={self.length - 1} idx={idx} script={script} />
         ))}

@@ -54,10 +54,10 @@ export default function Home() {
 
       <div
         ref={refHome}
-        className="h-screen flex justify-center items-center bg-gradient-to-tl from-base-100 to-base-300"
+        className="h-screen flex justify-center items-center bg-gradient-to-tl from-base-100 to-base-300 overflow-x-hidden"
       >
-        <AnimationDark />
         <AnimationLight />
+        <AnimationDark />
         <Coder />
       </div>
 
