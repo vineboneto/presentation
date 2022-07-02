@@ -4,16 +4,7 @@ import { MutableRefObject, useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Aos from 'aos'
 
-import {
-  Header,
-  Coder,
-  Footer,
-  PageContent,
-  PageTitle,
-  ModalCurriculum,
-  AnimationDark,
-  AnimationLight,
-} from '@/components'
+import { Header, Coder, Footer, PageContent, PageTitle, ModalCurriculum, AnimationBackground } from '@/components'
 import { useTheme } from '@/contexts'
 
 import 'aos/dist/aos.css'
@@ -56,14 +47,13 @@ export default function Home() {
         ref={refHome}
         className="h-screen flex justify-center items-center bg-gradient-to-tl from-base-100 to-base-300 overflow-x-hidden"
       >
-        <AnimationLight />
-        <AnimationDark />
+        <AnimationBackground />
         <Coder />
       </div>
 
       <ModalCurriculum isOpen={isOpenModal} toggle={() => setIsOpenModal((old) => !old)} />
       <div className="min-h-screen relative bg-gradient-to-bl from-base-100 to-base-300" ref={refAbout}>
-        <AnimationDark />
+        <AnimationBackground />
         <PageContent>
           <div className="w-[650px] space-y-6 z-50">
             <PageTitle>{t('about')}</PageTitle>
@@ -138,7 +128,7 @@ export default function Home() {
       </div>
 
       <div ref={refJobs} className="h-screen bg-gradient-to-tl from-base-100 to-base-300 relative">
-        <AnimationDark />
+        <AnimationBackground />
         <PageContent>
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('jobs')}</PageTitle>
@@ -167,7 +157,7 @@ export default function Home() {
       </div>
 
       <div ref={refPortfolio} className="h-screen bg-gradient-to-bl from-base-100 to-base-300 relative">
-        <AnimationDark />
+        <AnimationBackground />
         <PageContent>
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('portfolio')}</PageTitle>
