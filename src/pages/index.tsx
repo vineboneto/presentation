@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { MutableRefObject, useRef, useState } from 'react'
-import { BsArrowDown } from 'react-icons/bs'
+import { MutableRefObject, useRef, useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import Aos from 'aos'
 
-import { Header, Coder, Footer, PageContent, PageTitle, ModalCurriculum } from '@/components'
+import { Header, Coder, Footer, PageContent, PageTitle, ModalCurriculum, ArrowDown } from '@/components'
+
+import 'aos/dist/aos.css'
 
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
@@ -20,6 +22,11 @@ export default function Home() {
       window.scrollTo(0, ref.current?.offsetTop || 0)
     }
   }
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+    Aos.refresh()
+  }, [])
 
   return (
     <div className="max-w-screen min-h-screen overflow-hidden">
@@ -78,7 +85,7 @@ export default function Home() {
             <p className="text-justify leading-5 text-xs md:text-lg md:leading-7">{t('about-text')}</p>
 
             <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
-              <div className="card glass transition-all duration-300s hover:scale-105">
+              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>
                   <ul className="list-none">
@@ -91,7 +98,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="card glass transition-all duration-300s hover:scale-105">
+              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Frontend</h2>
                   <ul className="list-none">
@@ -101,7 +108,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="card glass transition-all duration-300s hover:scale-105">
+              <div data-aos="fade-up" className="card glass transition-all duration-300s hover:scale-105">
                 <div className="card-body">
                   <h2 className="card-title">Mobile</h2>
                   <ul className="list-none">
@@ -119,18 +126,21 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('jobs')}</PageTitle>
             <div className="space-y-4">
-              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+              <div
+                data-aos="fade-right"
+                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
+              >
                 <div className="card-body">
                   <h2 className="card-title">{t('Health department')}</h2>
                   <span>Ago 2019 - Ago 2021 | Videira, SC</span>
                   <p>{t('first-job-text')}</p>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
-                <BsArrowDown className="relative h-6 w-6 text-base" />
-              </div>
-              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+              <ArrowDown data-aos="zoom-in" />
+              <div
+                data-aos="fade-left"
+                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
+              >
                 <div className="card-body">
                   <h2 className="card-title">Skoretech Soluções em Tecnologia LTDA</h2>
                   <span>Ago 2021 - Now | Videira, SC</span>
@@ -147,7 +157,10 @@ export default function Home() {
           <div className="w-[650px] space-y-6">
             <PageTitle>{t('portfolio')}</PageTitle>
             <div className="space-y-4">
-              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+              <div
+                data-aos="fade-right"
+                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
+              >
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
@@ -160,11 +173,11 @@ export default function Home() {
                   <p>{t('first-portfolio-text')}</p>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
-                <BsArrowDown className="relative h-6 w-6 text-base" />
-              </div>
-              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+              <ArrowDown data-aos="zoom-in" />
+              <div
+                data-aos="fade-left"
+                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
+              >
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
@@ -177,11 +190,11 @@ export default function Home() {
                   <p>{t('second-portfolio-text')}</p>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <BsArrowDown className="absolute h-6 w-6 text-base animate-ping opacity-75" />
-                <BsArrowDown className="relative h-6 w-6 text-base" />
-              </div>
-              <div className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105">
+              <ArrowDown data-aos="zoom-in" />
+              <div
+                data-aos="fade-right"
+                className="card shadow-xl card-bordered bg-base-300 transition-all duration-300s hover:scale-105"
+              >
                 <div className="card-body">
                   <a
                     className="card-title link link-hover"
