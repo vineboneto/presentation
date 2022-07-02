@@ -16,7 +16,7 @@ export function DropdownNavbar({ scrollHome, scrollAbout, scrollJobs, scrollPort
       <label tabIndex={0} className="btn btn-ghost md:hidden">
         <BiMenuAltRight size={30} />
       </label>
-      <ul tabIndex={0} className="menu dropdown-content shadow-xl mt-3 p-2  glass rounded-box w-52">
+      <ul tabIndex={0} className="menu dropdown-content shadow-xl mt-3 p-2 bg-base-300 rounded-box w-52">
         <li className="">
           <a className="link link-hove active:bg-base-300" onClick={scrollHome}>
             <span className="clip-text text-sm text-base-content ">Home</span>
