@@ -95,12 +95,11 @@ export default function Home() {
                 <div className="card-body">
                   <h2 className="card-title">Backend</h2>
                   <ul className="list-none">
-                    <li>NodeJS</li>
-                    <li>Typescript</li>
+                    <li>NodeJS (JS, TS)</li>
                     <li>Clean Architecture</li>
-                    <li>Express</li>
-                    <li>Elixir (learning)</li>
-                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Go (learning)</li>
+                    <li>SQL, NoSQL</li>
                   </ul>
                 </div>
               </div>
@@ -110,7 +109,6 @@ export default function Home() {
                   <ul className="list-none">
                     <li>ReactJS</li>
                     <li>CSS; Tailwind...</li>
-                    <li>HTML</li>
                   </ul>
                 </div>
               </div>
@@ -199,7 +197,7 @@ export default function Home() {
                   <div className="card-body">
                     <a
                       className="card-title link link-hover"
-                      href="https://dwl-web.herokuapp.com/"
+                      href="https://github.com/vineboneto/dwl-web"
                       target="_blank"
                       rel="noreferrer"
                     >
