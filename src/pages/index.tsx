@@ -12,7 +12,6 @@ import 'aos/dist/aos.css'
 export default function Home() {
   const [isOpenModal, setIsOpenModal] = useState(false)
   const { t } = useTranslation()
-  const { theme } = useTheme()
 
   const refHome = useRef<HTMLDivElement>(null)
   const refAbout = useRef<HTMLDivElement>(null)
@@ -98,7 +97,7 @@ export default function Home() {
                     <li>NodeJS (JS, TS)</li>
                     <li>Clean Architecture</li>
                     <li>Python</li>
-                    <li>Go (learning)</li>
+                    <li>Go</li>
                     <li>SQL, NoSQL</li>
                   </ul>
                 </div>
@@ -197,11 +196,11 @@ export default function Home() {
                   <div className="card-body">
                     <a
                       className="card-title link link-hover"
-                      href="https://github.com/vineboneto/dwl-web"
+                      href="https://github.com/vineboneto/go-sql-builder"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      DWL Web
+                      GO SQL Builder
                     </a>
                     <p>{t('third-portfolio-text')}</p>
                   </div>

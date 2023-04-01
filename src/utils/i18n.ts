@@ -22,7 +22,7 @@ const resources = {
       'first-portfolio-text': 'Turing machine simulator (College work). I don"t really remember how it works',
       'N queens hill climbing': 'N queens hill climbing',
       'second-portfolio-text': 'Solving the problem of 8 queens on a chessboard using hill climbing search algorithm',
-      'third-portfolio-text': 'Convert youtube videos to mp3/mp4',
+      'third-portfolio-text': 'SQL Builder for gorm lib in golang',
     },
   },
   pt: {
@@ -47,7 +47,7 @@ const resources = {
       'N queens hill climbing': '8 Rainhas hill climbing',
       'second-portfolio-text':
         'Resolvendo o problema de 8 rainhas em um tabuleiro de xadrez usando algoritmo de hill climbing',
-      'third-portfolio-text': 'Converta vídeos do youtube para mp3/mp4',
+      'third-portfolio-text': 'SQL Builder para biblioteca gorm do golang',
     },
   },
 }
