@@ -206,6 +206,22 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div data-aos="fade-left">
+                <div className="card card-bordered bg-base-300 transition-all duration-300s hover:scale-105 rounded-lg">
+                  <div className="card-body">
+                    <a
+                      className="card-title link link-hover"
+                      href="https://github.com/vineboneto/books-microservices"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {t('Microservices implementation')}
+                    </a>
+                    <p>{t('fourth-portfolio-text')}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </PageContent>

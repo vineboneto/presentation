@@ -21,8 +21,10 @@ const resources = {
       'Turing machine': 'Turing machine',
       'first-portfolio-text': 'Turing machine simulator (College work). I don"t really remember how it works',
       'N queens hill climbing': 'N queens hill climbing',
+      'Microservices implementation': 'Microservices implementation',
       'second-portfolio-text': 'Solving the problem of 8 queens on a chessboard using hill climbing search algorithm',
       'third-portfolio-text': 'SQL Builder for gorm lib in golang',
+      'fourth-portfolio-text': 'Book management system with microservices',
     },
   },
   pt: {
@@ -45,9 +47,11 @@ const resources = {
       'first-portfolio-text':
         'Simulador de máquina de Turing (trabalho universitário). Eu realmente não me lembro como funciona',
       'N queens hill climbing': '8 Rainhas hill climbing',
+      'Microservices implementation': 'Implementação de microserviços',
       'second-portfolio-text':
         'Resolvendo o problema de 8 rainhas em um tabuleiro de xadrez usando algoritmo de hill climbing',
       'third-portfolio-text': 'SQL Builder para biblioteca gorm do golang',
+      'fourth-portfolio-text': 'Sistema de gerenciamento de livros com microserviços',
     },
   },
 }
