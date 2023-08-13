@@ -38,7 +38,7 @@ export function Footer({ scrollAbout, scrollHome, scrollJobs, scrollPortfolio }:
         </div>
       </div>
       <div>
-        <p>Copyright © 2022 - All right reserved for me :)</p>
+        <p>Copyright © {new Date().getFullYear()} - All right reserved for me :)</p>
       </div>
     </footer>
   )
